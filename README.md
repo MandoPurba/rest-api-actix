@@ -3,9 +3,6 @@ Project structure should separate concerns across layers like `domain`, `applica
 ```
 my-actix-web-app/
 ├── src/
-│   ├── application/                # Use cases and business rules
-│   │   ├── use_cases.rs             # Application logic (e.g., user registration, message sending)
-│   │   └── mod.rs
 │   ├── domain/                     # Business domain logic
 │   │   ├── entities/               # Core entities of the system (e.g., User, Message)
 │   │   │   ├── user.rs
@@ -13,9 +10,13 @@ my-actix-web-app/
 │   │   ├── errors.rs               # Domain-specific errors
 │   │   └── mod.rs
 │   ├── infrastructure/             # External systems (e.g., database, external APIs)
-│   │   ├── database/               # DB models, repositories, and connections
+│   │   ├── database/               # DB connections
 │   │   │   ├── models.rs           # DB models
 │   │   │   ├── repository.rs       # Repository implementation for DB
+│   │   │   └── mod.rs
+│   │   ├── models/                 # model
+│   │   │   └── mod.rs
+│   │   ├── repositories/          # repositories
 │   │   │   └── mod.rs
 │   │   ├── external_services.rs    # Interfacing with third-party services (e.g., Kafka, external APIs)
 │   │   └── mod.rs

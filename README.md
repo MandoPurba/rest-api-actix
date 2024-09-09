@@ -27,7 +27,6 @@ my-actix-web-app/
 │   │   │   └── mod.rs
 │   │   ├── web/                    # Actix Web setup, routes, middlewares
 │   │   │   ├── routes.rs           # HTTP route definitions
-│   │   │   ├── middlewares.rs      # Middleware definitions
 │   │   │   └── mod.rs
 │   │   └── mod.rs
 │   ├── config/                     # Configuration management
